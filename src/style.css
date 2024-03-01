@@ -19,7 +19,7 @@ html, body {
     left: 12px;
     right: 12px;
     bottom: 12px;
-    background-image: url("./waao.png");
+    background-image: url("../public/img/waao.png");
     position: absolute;
     background-position: center;
     background-repeat: no-repeat;

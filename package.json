@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "check": "biome check ./data index.htm",
-    "start": "caddy file-server --listen :8080"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@biomejs/biome": "1.5.3"
+    "@biomejs/biome": "1.5.3",
+    "vite": "^5.1.4"
   }
 }
