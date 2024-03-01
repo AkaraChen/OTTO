@@ -1,0 +1,17 @@
+{
+  "name": "otto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "check": "biome check ./data index.htm",
+    "start": "parcel index.htm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "1.5.3",
+    "parcel": "^2.12.0"
+  }
+}
