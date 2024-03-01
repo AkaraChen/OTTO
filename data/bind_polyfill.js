@@ -45,7 +45,6 @@ KeyboardInputManager.prototype.emit = function (event, data) {
 };
 
 KeyboardInputManager.prototype.listen = function () {
-
 	const map = {
 		38: 0, // Up
 		39: 1, // Right
@@ -179,7 +178,6 @@ function HTMLActuator() {
 }
 
 HTMLActuator.prototype.actuate = function (grid, metadata) {
-
 	window.requestAnimationFrame(() => {
 		this.clearContainer(this.tileContainer);
 
@@ -238,7 +236,6 @@ HTMLActuator.prototype.tileHTML = [
 ];
 //                                   2     4    8     16       32       64        128       256        512          1024           2048
 HTMLActuator.prototype.addTile = function (tile) {
-
 	const wrapper = document.createElement("div");
 	const inner = document.createElement("div");
 	const position = tile.previousPosition || { x: tile.x, y: tile.y };
@@ -722,7 +719,6 @@ GameManager.prototype.PlaySound3 = (musicId) => {
 	}
 };
 GameManager.prototype.move = function (direction) {
-
 	if (this.isGameTerminated()) return; // Don't do anything if the game's over
 
 	let cell;
@@ -1008,7 +1004,6 @@ GameManager.prototype.movesAvailable = function () {
 
 // Check for available matches between tiles (more expensive check)
 GameManager.prototype.tileMatchesAvailable = function () {
-
 	let tile;
 
 	for (let x = 0; x < this.size; x++) {
