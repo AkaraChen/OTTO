@@ -5,12 +5,9 @@ html, body {
     color: #776e65;
     font-family: "Microsoft YaHei", sans-serif, 'Microsoft Sans Serif','Microsoft JhengHei UI';
     font-size: 18px;
-    /* luigi-修改点-5 */
     position: relative;
-    /* luigi-修改点-5-over */
 }
 
-/* luigi-修改点-5 */
 #luigi-modal{
     display: none;
     background-color: #fff;
@@ -25,12 +22,9 @@ html, body {
     background-repeat: no-repeat;
     z-index: 1;
 }
-/* luigi-修改点-5-over */
  
 body {
-    /* luigi-修改点-5 */
     margin: 0px 0;
-    /* luigi-修改点-5-over */
 }
  
 input {
@@ -170,10 +164,8 @@ hr {
 .container {
     width: 500px;
     margin: 0 auto;
-    /* luigi-修改点-5 */
     position: relative;
     z-index: 0;
-    /* luigi-修改点-5-over */
 }
  
 @keyframes fade-in {
@@ -236,14 +228,11 @@ hr {
 .game-message .lower {
     display: block;
     margin-top: 29px;
-    /* luigi-修改点-6 */
     display: flex;
     flex-direction: row;
     text-align: center;
     justify-content: center;
-    /* luigi-修改点-6-over */
 }
-/* luigi-修改点-6 */
 .game-message .lower .link{
     display: block;
     text-decoration: none;
@@ -255,8 +244,6 @@ hr {
     width: 50px;
     height: 50px;
 }
-/* luigi-修改点-6-over */
-
  
 .game-message .mailing-list {
     margin-top: 52px;
@@ -359,14 +346,11 @@ hr {
     width: 107px;
     height: 107px;
     line-height: 116.25px;
-
-    /* luigi-修改点-1 */
     word-wrap: break-word;
     line-height: 29px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* luigi-修改点-1-over */
 }
  
 .tile.tile-position-1-1 {

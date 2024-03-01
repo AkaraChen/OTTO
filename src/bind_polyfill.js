@@ -1,15 +1,14 @@
-// luigi-修改点-2
-const getRandomItem = (array = []) => {
+function getRandomItem(array = []) {
 	const index = Math.floor(Math.random() * array.length);
 	const result = array[index];
 	return result;
-};
-const playAudio = (audioFile = "", v = 0.4) => {
+}
+
+function playAudio(audioFile = "", v = 0.4) {
 	const audio = new Audio(audioFile);
 	audio.volume = v; //音量
 	if (audio) audio.play();
-};
-// luigi-修改点-2-over
+}
 
 class KeyboardInputManager {
 	constructor() {
@@ -714,7 +713,6 @@ class GameManager {
 						if (tile.value === 2) {
 							//有数字为4的方块被合成
 							//self.PlaySound("Play2");
-							// luigi-修改点-2
 							const srcs = [
 								"./audio/4/1.wav",
 								"./audio/4/2.wav",
@@ -725,13 +723,10 @@ class GameManager {
 							];
 							const audioFile = getRandomItem(srcs);
 							playAudio(audioFile);
-
-							// luigi-修改点-2-over
 						}
 						if (tile.value === 4) {
 							//有数字为8的方块被合成
 							//self.PlaySound("Play3");
-							// // luigi-修改点-2
 							const srcs = [
 								"./audio/8/1.wav",
 								"./audio/8/2.wav",
@@ -742,7 +737,6 @@ class GameManager {
 							];
 							const audioFile = getRandomItem(srcs);
 							playAudio(audioFile);
-							// luigi-修改点-2-over
 						}
 
 						if (tile.value === 8) {
@@ -757,7 +751,6 @@ class GameManager {
 							];
 							const audioFile = getRandomItem(srcs);
 							playAudio(audioFile);
-							// luigi-修改点-2-over
 						}
 
 						if (tile.value === 16) {
@@ -765,7 +758,6 @@ class GameManager {
 							const srcs = ["./audio/32/1.wav"];
 							const audioFile = getRandomItem(srcs);
 							playAudio(audioFile);
-							// luigi-修改点-2-over
 						}
 
 						if (tile.value === 32) {
@@ -777,7 +769,6 @@ class GameManager {
 							];
 							const audioFile = getRandomItem(srcs);
 							playAudio(audioFile);
-							// luigi-修改点-2-over
 						}
 
 						if (tile.value === 64) {
@@ -789,35 +780,34 @@ class GameManager {
 							];
 							const audioFile = getRandomItem(srcs);
 							playAudio(audioFile);
-							// luigi-修改点-2-over
 						}
 						if (tile.value === 128) {
 							//有数字为256的方块被合成
 							const srcs = ["./audio/256/1.wav"];
 							const audioFile = getRandomItem(srcs);
 							playAudio(audioFile);
-							// luigi-修改点-2-over
+							
 						}
 						if (tile.value === 256) {
 							//有数字为512的方块被合成
 							const srcs = ["./audio/512/1.wav", "./audio/512/2.wav"];
 							const audioFile = getRandomItem(srcs);
 							playAudio(audioFile);
-							// luigi-修改点-2-over
+							
 						}
 						if (tile.value === 512) {
 							//有数字为1024的方块被合成
 							const srcs = ["./audio/1024/1.wav"];
 							const audioFile = getRandomItem(srcs);
 							playAudio(audioFile);
-							// luigi-修改点-2-over
+							
 						}
 						if (tile.value === 1024) {
 							//哇袄！！！！！
 							const srcs = ["./audio/2048/1.wav"];
 							const audioFile = getRandomItem(srcs);
 							playAudio(audioFile);
-							// luigi-修改点-2-over
+							
 						}
 						// Converge the two tiles' positions
 						tile.updatePosition(positions.next);
@@ -828,7 +818,6 @@ class GameManager {
 						// The mighty 2048 tile
 						if (merged.value === 2048) {
 							this.won = true;
-							// luigi-修改点-5
 							const audioFile = "./audio/win/1.wav";
 							playAudio(audioFile, 1);
 							const dom = document.getElementById("luigi-modal");
@@ -838,7 +827,6 @@ class GameManager {
 									dom.style.display = "none";
 								}, 3000);
 							}
-							// luigi-修改点-5-over
 						}
 					} else {
 						this.moveTile(tile, positions.farthest);
@@ -854,7 +842,6 @@ class GameManager {
 		if (moved) {
 			//按下了上下左右中的一个按键，画面变动，调用audio/success/*.mp3中的随机一个
 			this.addRandomTile();
-			// luigi-修改点-3-播放阴乐
 			const srcs = [
 				"./audio/success/1.wav",
 				"./audio/success/2.wav",
@@ -895,7 +882,6 @@ class GameManager {
 			this.actuate();
 		} else {
 			//按下了上下左右中的一个按键，但是画面不变动，调用audio/failed/*.mp3中的随机一个
-			// luigi-修改点-4
 			const srcs = [
 				"./audio/failed/1.wav",
 				"./audio/failed/2.wav",
@@ -911,7 +897,6 @@ class GameManager {
 			];
 			const audioFile = getRandomItem(srcs);
 			playAudio(audioFile);
-			// luigi-修改点-4-over
 		}
 	}
 	// Get the vector representing the chosen direction
