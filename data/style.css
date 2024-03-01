@@ -9,8 +9,9 @@ html, body {
     position: relative;
     /* luigi-修改点-5-over */
 }
+
 /* luigi-修改点-5 */
-.luigi-modal{
+#luigi-modal{
     display: none;
     background-color: #fff;
     position: absolute;
